@@ -43,6 +43,6 @@ main();
 const scheduleExpressionMinute = '* * * * *'; // Run once every minute for testing
 const scheduleExpression = '0 12 * * 5'; // Run once every three hours in prod
 
-const job = new CronJob(scheduleExpression, main); // change to scheduleExpressionMinute for testing
+const job = new CronJob(process.env.CRON_SCHEDULE!, main); // change to scheduleExpressionMinute for testing
 
 job.start();
