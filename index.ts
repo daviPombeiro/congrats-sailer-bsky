@@ -32,11 +32,8 @@ async function main() {
                         height: 360
                     }
                 }],
-        },
-        createdAt: new Date().toISOString()
+        }
     })
-
-    console.log("Just posted!")
 }
 
 main();

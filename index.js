@@ -54,14 +54,12 @@ async function main() {
                     }
                 }
             ],
-        },
-        createdAt: new Date().toISOString()
+        }
     });
-    console.log("Just posted!");
 }
 main();
 // Run this on a cron job
 const scheduleExpressionMinute = '* * * * *'; // Run once every minute for testing
-const scheduleExpression = '0 9 * * 5'; // Run once every three hours in prod
+const scheduleExpression = '0 12 * * 5'; // Run once every three hours in prod
 const job = new cron_1.CronJob(scheduleExpression, main); // change to scheduleExpressionMinute for testing
 job.start();
